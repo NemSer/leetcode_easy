@@ -1,0 +1,22 @@
+# 20. Valid Parentheses
+
+# class Solution:
+#
+#     def isValid(self, s: str) -> bool:
+#         stack = []
+#         for i in range(len(s)):
+#             if s[i] in ('(', '[', '{'):
+#                 stack.append(s[i])
+#                 continue
+#             elif s[i] == ')' and len(stack) != 0 and stack[-1] == '(':
+#                 stack.append(s[i])
+#                 stack = stack[0: len(stack) - 2]
+#             elif s[i] == ']' and len(stack) != 0 and stack[-1] == '[':
+#                 stack.append(s[i])
+#                 stack = stack[0: len(stack) - 2]
+#             elif s[i] == '}' and len(stack) != 0 and stack[-1] == '{':
+#                 stack.append(s[i])
+#                 stack = stack[0: len(stack) - 2]
+#             else:
+#                 return False
+#         return not len(stack)
